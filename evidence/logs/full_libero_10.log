@@ -1,0 +1,63 @@
+==============================================
+ LIBERO Batch Evaluation
+==============================================
+ Checkpoint:    checkpoints/g05-libero/model.pt
+ Task config:   <from .hydra/config.yaml>
+ Output dir:    outputs/full_libero_10
+ Server:        ws://127.0.0.1:12345
+ Suites:        libero_10
+ Trials/task:   50
+ Parallel:      4
+ Steps wait:    20
+ Max batch:     30
+ Max wait ms:   1000
+ Env resolution: 256
+ Ensemble:      false
+ Save videos:   true
+ Overrides:     
+==============================================
+
+[1/3] Starting batched policy server on port 12345 ...
+  Server PID: 728663 (log: outputs/full_libero_10/server.log)
+  Waiting for server to be ready ...
+  Server is ready!
+
+[2/3] Launching 1 client(s) in parallel ...
+  Starting client: libero_10 -> outputs/full_libero_10/libero_10
+  Waiting for all clients to finish ...
+  [DONE] libero_10 (PID 729123)
+
+  Stopping server (PID 728663) ...
+
+[3/3] Generating summary ...
+
+==========================================================================================
+  LIBERO EVALUATION RESULTS — PER-TASK BREAKDOWN
+==========================================================================================
+Suite              TaskID  Success  Total     Rate  Description
+------------------------------------------------------------------------------------------
+libero_10               0     49/50      50   98.0%  put both the alphabet soup and the ...
+libero_10               1     48/50      50   96.0%  put both the cream cheese box and t...
+libero_10               2     49/50      50   98.0%  turn on the stove and put the moka ...
+libero_10               3     50/50      50  100.0%  put the black bowl in the bottom dr...
+libero_10               4     50/50      50  100.0%  put the white mug on the left plate...
+libero_10               5     50/50      50  100.0%  pick up the book and place it in th...
+libero_10               6     49/50      50   98.0%  put the white mug on the plate and ...
+libero_10               7     49/50      50   98.0%  put both the alphabet soup and the ...
+libero_10               8     50/50      50  100.0%  put both moka pots on the stove
+libero_10               9     48/50      50   96.0%  put the yellow and white mug in the...
+  ──────────────────────────────────────  Suite Avg:  98.4%  (492/500)
+
+============================================================
+  SUITE SUMMARY
+============================================================
+Suite               Success   Total      Rate
+------------------------------------------------------------
+libero_10            492/500     500    98.4%
+------------------------------------------------------------
+OVERALL              492/500     500    98.4%
+============================================================
+
+Summary saved to outputs/full_libero_10/summary.json
+
+All done!

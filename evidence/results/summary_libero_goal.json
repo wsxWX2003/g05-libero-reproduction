@@ -1,0 +1,95 @@
+{
+  "ckpt_path": "/mnt/workspace/GalaxeaVLA/checkpoints/g05-libero/model.pt",
+  "suites": {
+    "libero_goal": {
+      "successes": 491,
+      "total": 500,
+      "success_rate": 0.982
+    }
+  },
+  "grand_successes": 491,
+  "grand_total": 500,
+  "grand_success_rate": 0.982,
+  "per_task": [
+    {
+      "suite": "libero_goal",
+      "task_id": 0,
+      "description": "open the middle drawer of the cabinet",
+      "successes": 48,
+      "total": 50,
+      "success_rate": 0.96
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 1,
+      "description": "put the bowl on the stove",
+      "successes": 50,
+      "total": 50,
+      "success_rate": 1.0
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 2,
+      "description": "put the wine bottle on top of the cabinet",
+      "successes": 49,
+      "total": 50,
+      "success_rate": 0.98
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 3,
+      "description": "open the top drawer and put the bowl inside",
+      "successes": 46,
+      "total": 50,
+      "success_rate": 0.92
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 4,
+      "description": "put the bowl on top of the cabinet",
+      "successes": 50,
+      "total": 50,
+      "success_rate": 1.0
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 5,
+      "description": "push the plate to the front of the stove",
+      "successes": 49,
+      "total": 50,
+      "success_rate": 0.98
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 6,
+      "description": "put the cream cheese in the bowl",
+      "successes": 49,
+      "total": 50,
+      "success_rate": 0.98
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 7,
+      "description": "turn on the stove",
+      "successes": 50,
+      "total": 50,
+      "success_rate": 1.0
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 8,
+      "description": "put the bowl on the plate",
+      "successes": 50,
+      "total": 50,
+      "success_rate": 1.0
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 9,
+      "description": "put the wine bottle on the rack",
+      "successes": 50,
+      "total": 50,
+      "success_rate": 1.0
+    }
+  ]
+}

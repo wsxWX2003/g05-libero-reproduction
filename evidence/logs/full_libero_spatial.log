@@ -1,0 +1,63 @@
+==============================================
+ LIBERO Batch Evaluation
+==============================================
+ Checkpoint:    checkpoints/g05-libero/model.pt
+ Task config:   <from .hydra/config.yaml>
+ Output dir:    outputs/full_libero_spatial
+ Server:        ws://127.0.0.1:12345
+ Suites:        libero_spatial
+ Trials/task:   50
+ Parallel:      4
+ Steps wait:    20
+ Max batch:     30
+ Max wait ms:   1000
+ Env resolution: 256
+ Ensemble:      false
+ Save videos:   true
+ Overrides:     
+==============================================
+
+[1/3] Starting batched policy server on port 12345 ...
+  Server PID: 591118 (log: outputs/full_libero_spatial/server.log)
+  Waiting for server to be ready ...
+  Server is ready!
+
+[2/3] Launching 1 client(s) in parallel ...
+  Starting client: libero_spatial -> outputs/full_libero_spatial/libero_spatial
+  Waiting for all clients to finish ...
+  [DONE] libero_spatial (PID 591551)
+
+  Stopping server (PID 591118) ...
+
+[3/3] Generating summary ...
+
+==========================================================================================
+  LIBERO EVALUATION RESULTS — PER-TASK BREAKDOWN
+==========================================================================================
+Suite              TaskID  Success  Total     Rate  Description
+------------------------------------------------------------------------------------------
+libero_spatial          0     50/50      50  100.0%  pick up the black bowl between the ...
+libero_spatial          1     50/50      50  100.0%  pick up the black bowl next to the ...
+libero_spatial          2     50/50      50  100.0%  pick up the black bowl from table c...
+libero_spatial          3     50/50      50  100.0%  pick up the black bowl on the cooki...
+libero_spatial          4     48/50      50   96.0%  pick up the black bowl in the top d...
+libero_spatial          5     50/50      50  100.0%  pick up the black bowl on the ramek...
+libero_spatial          6     47/50      50   94.0%  pick up the black bowl next to the ...
+libero_spatial          7     49/50      50   98.0%  pick up the black bowl on the stove...
+libero_spatial          8     49/50      50   98.0%  pick up the black bowl next to the ...
+libero_spatial          9     50/50      50  100.0%  pick up the black bowl on the woode...
+  ──────────────────────────────────────  Suite Avg:  98.6%  (493/500)
+
+============================================================
+  SUITE SUMMARY
+============================================================
+Suite               Success   Total      Rate
+------------------------------------------------------------
+libero_spatial       493/500     500    98.6%
+------------------------------------------------------------
+OVERALL              493/500     500    98.6%
+============================================================
+
+Summary saved to outputs/full_libero_spatial/summary.json
+
+All done!

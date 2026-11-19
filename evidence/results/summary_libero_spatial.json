@@ -1,0 +1,95 @@
+{
+  "ckpt_path": "/mnt/workspace/GalaxeaVLA/checkpoints/g05-libero/model.pt",
+  "suites": {
+    "libero_spatial": {
+      "successes": 493,
+      "total": 500,
+      "success_rate": 0.986
+    }
+  },
+  "grand_successes": 493,
+  "grand_total": 500,
+  "grand_success_rate": 0.986,
+  "per_task": [
+    {
+      "suite": "libero_spatial",
+      "task_id": 0,
+      "description": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+      "successes": 50,
+      "total": 50,
+      "success_rate": 1.0
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 1,
+      "description": "pick up the black bowl next to the ramekin and place it on the plate",
+      "successes": 50,
+      "total": 50,
+      "success_rate": 1.0
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 2,
+      "description": "pick up the black bowl from table center and place it on the plate",
+      "successes": 50,
+      "total": 50,
+      "success_rate": 1.0
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 3,
+      "description": "pick up the black bowl on the cookie box and place it on the plate",
+      "successes": 50,
+      "total": 50,
+      "success_rate": 1.0
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 4,
+      "description": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+      "successes": 48,
+      "total": 50,
+      "success_rate": 0.96
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 5,
+      "description": "pick up the black bowl on the ramekin and place it on the plate",
+      "successes": 50,
+      "total": 50,
+      "success_rate": 1.0
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 6,
+      "description": "pick up the black bowl next to the cookie box and place it on the plate",
+      "successes": 47,
+      "total": 50,
+      "success_rate": 0.94
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 7,
+      "description": "pick up the black bowl on the stove and place it on the plate",
+      "successes": 49,
+      "total": 50,
+      "success_rate": 0.98
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 8,
+      "description": "pick up the black bowl next to the plate and place it on the plate",
+      "successes": 49,
+      "total": 50,
+      "success_rate": 0.98
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 9,
+      "description": "pick up the black bowl on the wooden cabinet and place it on the plate",
+      "successes": 50,
+      "total": 50,
+      "success_rate": 1.0
+    }
+  ]
+}

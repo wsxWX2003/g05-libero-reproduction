@@ -1,0 +1,171 @@
+root@dsw-2358086-f58c6987-z687x:/mnt/workspace# bash /mnt/workspace/rec.sh
+
+$ date
+Thu Nov 19 05:47:48 PM CST 2026
+
+$ cd /mnt/workspace/GalaxeaVLA && source .venv/bin/activate
+
+$ git log -1 --oneline
+89f2322 (HEAD -> main, origin/main, origin/HEAD) docs (readme): cite G0.5 arXiv paper
+
+$ (cd checkpoints/g05-libero && sha256sum -c model.pt.sha256)
+model.pt: OK
+
+$ export LIBERO_CONFIG_PATH=$(pwd)/experiments/libero MUJOCO_GL=egl PYOPENGL_PLATFORM=egl HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1
+
+$ bash scripts/run/eval_libero.sh checkpoints/g05-libero/model.pt --suites libero_goal --save_videos --output_dir outputs/record --num_trials 4 --num_parallel 4
+==============================================
+ LIBERO Batch Evaluation
+==============================================
+ Checkpoint:    checkpoints/g05-libero/model.pt
+ Task config:   <from .hydra/config.yaml>
+ Output dir:    outputs/record
+ Server:        ws://127.0.0.1:12345
+ Suites:        libero_goal
+ Trials/task:   4
+ Parallel:      4
+ Steps wait:    20
+ Max batch:     30
+ Max wait ms:   1000
+ Env resolution: 256
+ Ensemble:      false
+ Save videos:   true
+ Overrides:     
+==============================================
+
+[1/3] Starting batched policy server on port 12345 ...
+  Server PID: 38379 (log: outputs/record/server.log)
+  Waiting for server to be ready ...
+  Server is ready!
+
+[2/3] Launching 1 client(s) in parallel ...
+  Starting client: libero_goal -> outputs/record/libero_goal
+  Waiting for all clients to finish ...
+  [DONE] libero_goal (PID 41125)
+
+  Stopping server (PID 38379) ...
+
+[3/3] Generating summary ...
+
+==========================================================================================
+  LIBERO EVALUATION RESULTS — PER-TASK BREAKDOWN
+==========================================================================================
+Suite              TaskID  Success  Total     Rate  Description
+------------------------------------------------------------------------------------------
+libero_goal             0      4/4        4  100.0%  open the middle drawer of the cabinet
+libero_goal             1      4/4        4  100.0%  put the bowl on the stove
+libero_goal             2      4/4        4  100.0%  put the wine bottle on top of the c...
+libero_goal             3      3/4        4   75.0%  open the top drawer and put the bow...
+libero_goal             4      4/4        4  100.0%  put the bowl on top of the cabinet
+libero_goal             5      4/4        4  100.0%  push the plate to the front of the ...
+libero_goal             6      4/4        4  100.0%  put the cream cheese in the bowl
+libero_goal             7      4/4        4  100.0%  turn on the stove
+libero_goal             8      4/4        4  100.0%  put the bowl on the plate
+libero_goal             9      4/4        4  100.0%  put the wine bottle on the rack
+  ──────────────────────────────────────  Suite Avg:  97.5%  (39/40)
+
+============================================================
+  SUITE SUMMARY
+============================================================
+Suite               Success   Total      Rate
+------------------------------------------------------------
+libero_goal           39/40       40    97.5%
+------------------------------------------------------------
+OVERALL               39/40       40    97.5%
+============================================================
+
+Summary saved to outputs/record/summary.json
+
+All done!
+
+# ===== 以下为此前完成的全量评测（2000 episodes）=====
+
+$ cat /mnt/workspace/logs/full_timing.txt
+libero_goal exit=0 用时=141min
+libero_spatial exit=0 用时=149min
+libero_object exit=0 用时=129min
+libero_10 exit=0 用时=233min
+
+$ grep -h -A6 'SUITE SUMMARY' /mnt/workspace/logs/full_libero_*.log
+  SUITE SUMMARY
+============================================================
+Suite               Success   Total      Rate
+------------------------------------------------------------
+libero_10            492/500     500    98.4%
+------------------------------------------------------------
+OVERALL              492/500     500    98.4%
+--
+  SUITE SUMMARY
+============================================================
+Suite               Success   Total      Rate
+------------------------------------------------------------
+libero_goal          491/500     500    98.2%
+------------------------------------------------------------
+OVERALL              491/500     500    98.2%
+--
+  SUITE SUMMARY
+============================================================
+Suite               Success   Total      Rate
+------------------------------------------------------------
+libero_object        498/500     500    99.6%
+------------------------------------------------------------
+OVERALL              498/500     500    99.6%
+--
+  SUITE SUMMARY
+============================================================
+Suite               Success   Total      Rate
+------------------------------------------------------------
+libero_spatial       493/500     500    98.6%
+------------------------------------------------------------
+OVERALL              493/500     500    98.6%
+
+$ ls -la --time-style=long-iso outputs/full_libero_*/summary.json
+-rw-r--r-- 1 root root 2462 2026-11-14 13:55 outputs/full_libero_10/summary.json
+-rw-r--r-- 1 root root 2185 2026-11-14 05:22 outputs/full_libero_goal/summary.json
+-rw-r--r-- 1 root root 2375 2026-11-14 10:01 outputs/full_libero_object/summary.json
+-rw-r--r-- 1 root root 2593 2026-11-14 07:51 outputs/full_libero_spatial/summary.json
+
+$ grep -oE '"grand_(successes|total|success_rate)": *[0-9.]+' outputs/full_libero_*/summary.json
+outputs/full_libero_10/summary.json:"grand_successes": 492
+outputs/full_libero_10/summary.json:"grand_total": 500
+outputs/full_libero_10/summary.json:"grand_success_rate": 0.984
+outputs/full_libero_goal/summary.json:"grand_successes": 491
+outputs/full_libero_goal/summary.json:"grand_total": 500
+outputs/full_libero_goal/summary.json:"grand_success_rate": 0.982
+outputs/full_libero_object/summary.json:"grand_successes": 498
+outputs/full_libero_object/summary.json:"grand_total": 500
+outputs/full_libero_object/summary.json:"grand_success_rate": 0.996
+outputs/full_libero_spatial/summary.json:"grand_successes": 493
+outputs/full_libero_spatial/summary.json:"grand_total": 500
+outputs/full_libero_spatial/summary.json:"grand_success_rate": 0.986
+
+$ find outputs/full_libero_* -name '*.mp4' | wc -l
+2000
+
+# 终端部分结束
+root@dsw-2358086-f58c6987-z687x:/mnt/workspace# cd /mnt/workspace && rm -rf ev ev.tar.gz && mkdir -p ev/logs ev/results
+cp logs/full_*.log logs/full_timing.txt logs/gpu_full.csv logs/gpu_smoke.csv ev/logs/
+for s in goal spatial object 10; do cp GalaxeaVLA/outputs/full_libero_$s/summary.json ev/results/summary_libero_$s.json; done
+find GalaxeaVLA/outputs/record -name summary.json -exec cp {} ev/results/summary_record_libero_goal.json \;
+grep -rlE "hf_[A-Za-z0-9]{30,}" ev && echo "⚠️ 发现 token，先别上传" || echo "未发现 token"
+ls -lh ev/logs ev/results && tar czf ev.tar.gz ev && ls -lh ev.tar.gz
+未发现 token
+ev/logs:
+total 356K
+-rw-r--r-- 1 root root 2.9K Nov 19 18:04 full_libero_10.log
+-rw-r--r-- 1 root root 2.9K Nov 19 18:04 full_libero_goal.log
+-rw-r--r-- 1 root root 3.0K Nov 19 18:04 full_libero_object.log
+-rw-r--r-- 1 root root 3.0K Nov 19 18:04 full_libero_spatial.log
+-rw-r--r-- 1 root root  135 Nov 19 18:04 full_timing.txt
+-rw-r--r-- 1 root root 308K Nov 19 18:04 gpu_full.csv
+-rw-r--r-- 1 root root  26K Nov 19 18:04 gpu_smoke.csv
+
+ev/results:
+total 20K
+-rw-r--r-- 1 root root 2.5K Nov 19 18:04 summary_libero_10.json
+-rw-r--r-- 1 root root 2.2K Nov 19 18:04 summary_libero_goal.json
+-rw-r--r-- 1 root root 2.4K Nov 19 18:04 summary_libero_object.json
+-rw-r--r-- 1 root root 2.6K Nov 19 18:04 summary_libero_spatial.json
+-rw-r--r-- 1 root root 2.2K Nov 19 18:04 summary_record_libero_goal.json
+-rw-r--r-- 1 root root 48K Nov 19 18:04 ev.tar.gz
+root@dsw-2358086-f58c6987-z687x:/mnt/workspace# 

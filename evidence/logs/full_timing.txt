@@ -1,0 +1,4 @@
+libero_goal exit=0 用时=141min
+libero_spatial exit=0 用时=149min
+libero_object exit=0 用时=129min
+libero_10 exit=0 用时=233min

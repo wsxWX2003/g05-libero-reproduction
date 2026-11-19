@@ -1,0 +1,63 @@
+==============================================
+ LIBERO Batch Evaluation
+==============================================
+ Checkpoint:    checkpoints/g05-libero/model.pt
+ Task config:   <from .hydra/config.yaml>
+ Output dir:    outputs/full_libero_goal
+ Server:        ws://127.0.0.1:12345
+ Suites:        libero_goal
+ Trials/task:   50
+ Parallel:      4
+ Steps wait:    20
+ Max batch:     30
+ Max wait ms:   1000
+ Env resolution: 256
+ Ensemble:      false
+ Save videos:   true
+ Overrides:     
+==============================================
+
+[1/3] Starting batched policy server on port 12345 ...
+  Server PID: 507951 (log: outputs/full_libero_goal/server.log)
+  Waiting for server to be ready ...
+  Server is ready!
+
+[2/3] Launching 1 client(s) in parallel ...
+  Starting client: libero_goal -> outputs/full_libero_goal/libero_goal
+  Waiting for all clients to finish ...
+  [DONE] libero_goal (PID 510016)
+
+  Stopping server (PID 507951) ...
+
+[3/3] Generating summary ...
+
+==========================================================================================
+  LIBERO EVALUATION RESULTS — PER-TASK BREAKDOWN
+==========================================================================================
+Suite              TaskID  Success  Total     Rate  Description
+------------------------------------------------------------------------------------------
+libero_goal             0     48/50      50   96.0%  open the middle drawer of the cabinet
+libero_goal             1     50/50      50  100.0%  put the bowl on the stove
+libero_goal             2     49/50      50   98.0%  put the wine bottle on top of the c...
+libero_goal             3     46/50      50   92.0%  open the top drawer and put the bow...
+libero_goal             4     50/50      50  100.0%  put the bowl on top of the cabinet
+libero_goal             5     49/50      50   98.0%  push the plate to the front of the ...
+libero_goal             6     49/50      50   98.0%  put the cream cheese in the bowl
+libero_goal             7     50/50      50  100.0%  turn on the stove
+libero_goal             8     50/50      50  100.0%  put the bowl on the plate
+libero_goal             9     50/50      50  100.0%  put the wine bottle on the rack
+  ──────────────────────────────────────  Suite Avg:  98.2%  (491/500)
+
+============================================================
+  SUITE SUMMARY
+============================================================
+Suite               Success   Total      Rate
+------------------------------------------------------------
+libero_goal          491/500     500    98.2%
+------------------------------------------------------------
+OVERALL              491/500     500    98.2%
+============================================================
+
+Summary saved to outputs/full_libero_goal/summary.json
+
+All done!

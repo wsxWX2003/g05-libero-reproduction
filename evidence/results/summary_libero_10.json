@@ -1,0 +1,95 @@
+{
+  "ckpt_path": "/mnt/workspace/GalaxeaVLA/checkpoints/g05-libero/model.pt",
+  "suites": {
+    "libero_10": {
+      "successes": 492,
+      "total": 500,
+      "success_rate": 0.984
+    }
+  },
+  "grand_successes": 492,
+  "grand_total": 500,
+  "grand_success_rate": 0.984,
+  "per_task": [
+    {
+      "suite": "libero_10",
+      "task_id": 0,
+      "description": "put both the alphabet soup and the tomato sauce in the basket",
+      "successes": 49,
+      "total": 50,
+      "success_rate": 0.98
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 1,
+      "description": "put both the cream cheese box and the butter in the basket",
+      "successes": 48,
+      "total": 50,
+      "success_rate": 0.96
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 2,
+      "description": "turn on the stove and put the moka pot on it",
+      "successes": 49,
+      "total": 50,
+      "success_rate": 0.98
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 3,
+      "description": "put the black bowl in the bottom drawer of the cabinet and close it",
+      "successes": 50,
+      "total": 50,
+      "success_rate": 1.0
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 4,
+      "description": "put the white mug on the left plate and put the yellow and white mug on the right plate",
+      "successes": 50,
+      "total": 50,
+      "success_rate": 1.0
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 5,
+      "description": "pick up the book and place it in the back compartment of the caddy",
+      "successes": 50,
+      "total": 50,
+      "success_rate": 1.0
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 6,
+      "description": "put the white mug on the plate and put the chocolate pudding to the right of the plate",
+      "successes": 49,
+      "total": 50,
+      "success_rate": 0.98
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 7,
+      "description": "put both the alphabet soup and the cream cheese box in the basket",
+      "successes": 49,
+      "total": 50,
+      "success_rate": 0.98
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 8,
+      "description": "put both moka pots on the stove",
+      "successes": 50,
+      "total": 50,
+      "success_rate": 1.0
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 9,
+      "description": "put the yellow and white mug in the microwave and close it",
+      "successes": 48,
+      "total": 50,
+      "success_rate": 0.96
+    }
+  ]
+}

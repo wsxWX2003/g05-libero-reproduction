@@ -1,0 +1,27 @@
+﻿video,suite,task_id,episode,short_name,stage,category,unexpected_contact,articulated_task,articulated_breakdown,description
+rollout_pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_t_episode18_failure.mp4,libero_spatial,4,18,spatial-t4 抽屉里的碗→盘子 ep18,抓取,与容器边缘/障碍物碰撞,是,是,开口处取放碰边缘,抓碗的时候，夹爪没夹住，夹爪靠左边，夹到抽屉的边。
+rollout_pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_t_episode46_failure.mp4,libero_spatial,4,46,spatial-t4 抽屉里的碗→盘子 ep46,抓取,与容器边缘/障碍物碰撞,是,是,开口处取放碰边缘,抓碗的时候，夹爪没夹住，夹爪靠左边，夹到抽屉的边。
+rollout_pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_episode30_failure.mp4,libero_spatial,6,30,spatial-t6 饼干盒旁的碗→盘子 ep30,放置,放置阶段超时,否,否,,碗已搬到盘子上方、部分接触盘子，夹爪尚未松开时 220 步（11 秒）用完；初看像放歪（初次标注：已经放进去了，但是有点歪）。
+rollout_pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_episode36_failure.mp4,libero_spatial,6,36,spatial-t6 饼干盒旁的碗→盘子 ep36,放置,放置阶段超时,否,否,,碗已搬到盘子上方、部分接触盘子，夹爪尚未松开时 220 步（11 秒）用完；初看像放歪（初次标注：已经放进去了，但是有点歪）。
+rollout_pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_episode45_failure.mp4,libero_spatial,6,45,spatial-t6 饼干盒旁的碗→盘子 ep45,放置,放置阶段超时,否,否,,碗已搬到盘子上方、部分接触盘子，夹爪尚未松开时 220 步（11 秒）用完；初看像放歪（初次标注：已经放进去了，但是有点歪）。
+rollout_pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_episode0_failure.mp4,libero_spatial,7,0,spatial-t7 灶台上的碗→盘子 ep0,搬运,自由物体抓取失败,否,否,,抓碗的姿态不够好，所以搬运的过程中掉了。
+rollout_pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate_episode34_failure.mp4,libero_spatial,8,34,spatial-t8 盘子旁的碗→盘子 ep34,放置,放置阶段超时,否,否,,碗已搬到盘子上方、部分接触盘子，夹爪尚未松开时 220 步（11 秒）用完；初看像放歪（初次标注：已经放进去了，但是有点歪）。
+rollout_pick_up_the_alphabet_soup_and_place_it_in_the_basket_episode26_failure.mp4,libero_object,0,26,object-t0 字母汤→篮子 ep26,抓取,与容器边缘/障碍物碰撞,是,否,,抓起来之后，准备放篮子里，没放准，碰上篮子边缘掉了，再去抓瓶子抓不起来。
+rollout_pick_up_the_bbq_sauce_and_place_it_in_the_basket_episode17_failure.mp4,libero_object,3,17,object-t3 烧烤酱→篮子 ep17,抓取,与容器边缘/障碍物碰撞,是,否,,抓起来之后，准备放篮子里，没放准，碰上篮子边缘掉了，再去抓瓶子抓不起来。
+rollout_open_the_middle_drawer_of_the_cabinet_episode11_failure.mp4,libero_goal,0,11,goal-t0 打开中间抽屉 ep11,开抽屉,抽屉把手没抓住,否,是,把手没抓住,末端接近抽屉把手后，一直没抓住抽屉把手，拉不了抽屉把手。
+rollout_open_the_middle_drawer_of_the_cabinet_episode37_failure.mp4,libero_goal,0,37,goal-t0 打开中间抽屉 ep37,开抽屉,抽屉把手没抓住,否,是,把手没抓住,末端接近抽屉把手后，一直没抓住抽屉把手，拉不了抽屉把手。
+rollout_put_the_wine_bottle_on_top_of_the_cabinet_episode26_failure.mp4,libero_goal,2,26,goal-t2 酒瓶→柜顶 ep26,抓取,自由物体抓取失败,否,否,,抓酒瓶的时候，酒瓶倒了，抓不住。
+rollout_open_the_top_drawer_and_put_the_bowl_inside_episode17_failure.mp4,libero_goal,3,17,goal-t3 开上层抽屉放碗 ep17,搬运,与容器边缘/障碍物碰撞,是,是,开口处取放碰边缘,抽屉打开，但是碗第一次抓的时候失败了，因为抓起来的时候，碗碰到了拉出来抽屉的边，掉了。第二次抓起来了，但是15s时间结束，任务未完成。
+rollout_open_the_top_drawer_and_put_the_bowl_inside_episode20_failure.mp4,libero_goal,3,20,goal-t3 开上层抽屉放碗 ep20,开抽屉,抽屉把手没抓住,否,是,把手没抓住,末端接近抽屉把手后，一直没抓住抽屉把手，拉不了抽屉把手。
+rollout_open_the_top_drawer_and_put_the_bowl_inside_episode31_failure.mp4,libero_goal,3,31,goal-t3 开上层抽屉放碗 ep31,搬运,与容器边缘/障碍物碰撞,是,是,开口处取放碰边缘,抽屉打开，但是碗第一次抓的时候失败了，因为抓起来的时候，碗碰到了拉出来抽屉的边，掉了。第二次抓起来了，但是15s时间结束，任务未完成。
+rollout_open_the_top_drawer_and_put_the_bowl_inside_episode46_failure.mp4,libero_goal,3,46,goal-t3 开上层抽屉放碗 ep46,开抽屉,抽屉把手没抓住,否,是,把手没抓住,末端接近抽屉把手后，最后几秒拉开抽屉把手，但任务时间结束，抓取任务没有完成。
+rollout_push_the_plate_to_the_front_of_the_stove_episode9_failure.mp4,libero_goal,5,9,goal-t5 推盘子到灶台前 ep9,抓取,与容器边缘/障碍物碰撞,是,否,,抓盘子的时候，被抽屉把手挡住了，最后才碰到盘子，任务超时，未完成。
+rollout_put_the_cream_cheese_in_the_bowl_episode39_failure.mp4,libero_goal,6,39,goal-t6 奶酪→碗 ep39,抓取,自由物体抓取失败,否,否,,多次没夹住，最后几秒夹住，在搬运过程中，超时，任务失败。
+rollout_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket_episode49_failure.mp4,libero_10,0,49,L10-t0 字母汤+番茄酱→篮子 ep49,第二个放置,被旁边高物体挡住/碰倒,是,否,,抓第一个瓶子时，被旁边的高的饮料瓶挡住一段时间，但第一个瓶子放置成功了，第二个瓶子也完成抓取，和搬运，但因为任务超时，没完成放置。
+rollout_put_both_the_cream_cheese_box_and_the_butter_in_the_basket_episode41_failure.mp4,libero_10,1,41,L10-t1 奶酪+黄油→篮子 ep41,第二个抓取,被旁边高物体挡住/碰倒,是,否,,抓第一个物体成功，但是第二个物体抓取失败，因为被旁边的高的饮料瓶挡住一段时间，还把旁边高的饮料弄倒了。
+rollout_put_both_the_cream_cheese_box_and_the_butter_in_the_basket_episode46_failure.mp4,libero_10,1,46,L10-t1 奶酪+黄油→篮子 ep46,第二个抓取,被旁边高物体挡住/碰倒,是,否,,抓第一个物体成功，但是第二个物体抓取失败，因为被旁边的高的饮料瓶挡住一段时间，还把旁边高的饮料弄倒了。
+rollout_turn_on_the_stove_and_put_the_moka_pot_on_it_episode11_failure.mp4,libero_10,2,11,L10-t2 开灶台+放摩卡壶 ep11,抓取,自由物体抓取失败,否,是,与铰接无关,抓摩卡壶的时候，没抓到壶柄。
+rollout_put_the_white_mug_on_the_plate_and_put_the_chocolate_pudding_to_the_right_of_the_episode11_failure.mp4,libero_10,6,11,L10-t6 白杯→盘子+布丁放右边 ep11,放置,放歪,否,否,,杯子放歪掉了，布丁放好后，夹爪在布丁附近摆动，没离开。
+rollout_put_both_the_alphabet_soup_and_the_cream_cheese_box_in_the_basket_episode43_failure.mp4,libero_10,7,43,L10-t7 字母汤+奶酪→篮子 ep43,第一个抓取,自由物体抓取失败,否,否,,抓第一个瓶子时，把瓶子弄倒，瓶子平躺在桌面，难以进行抓取。
+rollout_put_the_yellow_and_white_mug_in_the_microwave_and_close_it_episode11_failure.mp4,libero_10,9,11,L10-t9 两个杯子→微波炉并关门 ep11,搬运,与容器边缘/障碍物碰撞,是,是,开口处取放碰边缘,抓起第一个杯子后，搬运过程中被微波炉门卡住了。
+rollout_put_the_yellow_and_white_mug_in_the_microwave_and_close_it_episode44_failure.mp4,libero_10,9,44,L10-t9 两个杯子→微波炉并关门 ep44,搬运,与容器边缘/障碍物碰撞,是,是,开口处取放碰边缘,抓起第一个杯子后，搬运过程中被微波炉框卡住了。
