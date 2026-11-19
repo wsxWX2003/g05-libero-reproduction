@@ -1,9 +1,12 @@
 # 星海图 G0.5 · LIBERO 仿真复现
 
 > 星海图 Galaxea「G0.5 复现与开源共创挑战」· 仿真复现方向
+>
 > 作者：吴思贤（Sixian Wu），University of Bristol / Bristol Robotics Laboratory，机器人硕士
+>
 > 技术分享帖（小红书）：[G0.5复现98.7%：26次失败我全看了](https://xhslink.cn/o/8PjnErVGezU)
-> 复现录屏：[百度网盘](https://pan.baidu.com/s/1QIPjQF_tS3U34DCs5e2FuQ?pwd=mwfk)（提取码 `mwfk`）（录屏内容与终端完整输出见 [`evidence/`](evidence/)）
+>
+> 复现录屏：[百度网盘](https://pan.baidu.com/s/1QIPjQF_tS3U34DCs5e2FuQ?pwd=mwfk)（提取码 `mwfk`），录屏内容与终端完整输出见 [`evidence/`](evidence/)
 
 ## 结果
 
