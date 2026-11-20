@@ -126,7 +126,7 @@ python /path/to/this/repo/scripts/articulated_stats.py outputs/full_libero_*/sum
 
 - **本仓库的全量结果不受影响**：全量评测 `num_trials=50 ≥ num_parallel=4`，后续分配有 `next_trial_idx < num_trials` 的检查；每个 suite 的 total 均为 500，视频文件共 2000 个。
 - 录屏中的现场评测使用 `--num_trials 4 --num_parallel 4`（40 个 episode，结果 39/40）。
-- 修复思路：初始化时只给 `min(num_parallel, num_trials)` 个环境分配 trial，其余环境标记为空闲。
+- 已向官方仓库提交 Issue [#75](https://github.com/OpenGalaxea/GalaxeaVLA/issues/75) 和修复 PR [#76](https://github.com/OpenGalaxea/GalaxeaVLA/pull/76)（初始化时只在 `next_trial_idx < num_trials` 时分配 trial，其余环境保持空闲；附 CPU 单元测试，修复前 35 例中 13 例失败，修复后全部通过）。
 
 ## 复现中遇到的问题
 
